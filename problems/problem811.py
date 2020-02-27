@@ -9,12 +9,9 @@ class Solution:
             cnt = int(cnt)
             for i in range(domains.count(".") + 1):
                 domain = '.'.join(domains.split('.')[i:])
-                print(domain)
                 d[domain] = d.get(domain, 0) + cnt
 
-        ans = [f"{value} {key}" for key, value in d.items()]
-        print(ans)
-        return [f"{value} {key}" for key, value in d.items()]
+        return [f"{cnt} {domain}" for domain, cnt in d.items()]
 
 
 s = Solution()
